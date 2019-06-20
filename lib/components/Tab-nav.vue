@@ -173,8 +173,8 @@
         onTabRemove,
         navStyle,
         scrollable,
-        scrollNext,
-        scrollPrev,
+        //scrollNext,
+        //scrollPrev,
         changeTab,
         setFocus,
         removeFocus
