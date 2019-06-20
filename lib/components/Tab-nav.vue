@@ -193,6 +193,8 @@
           : null;
         const tabLabelContent = pane.$slots.label || pane.label;
         const tabindex = pane.active ? 0 : -1;
+        const firstLabel = tabLabelContent.replace(/( .*|\/.*)/,'');
+        const lowerLabel = firstLabel.toLowerCase();
         return (
           <div
             class={{
@@ -201,6 +203,7 @@
               'is-active': pane.active,
               'is-disabled': pane.disabled,
               'is-closable': closable,
+              [`${lowerLabel}`]: true, 
               'is-focus': this.isFocus
             }}
             id={`tab-${tabName}`}
