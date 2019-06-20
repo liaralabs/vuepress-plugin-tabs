@@ -61,7 +61,13 @@
     }
   }
   @include e(nav-scroll) {
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   @include e((nav-next, nav-prev)) {
     position: absolute;
